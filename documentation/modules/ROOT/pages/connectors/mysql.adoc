@@ -1574,7 +1574,6 @@ Using the MySQL connector is straightforward. Here is an example of the configur
     "connector.class": "io.debezium.connector.mysql.MySqlConnector", // <2>
     "database.hostname": "192.168.99.100", // <3>
     "database.port": "3306", // <4>
-    "database.user": "debezium", // <5>
     "database.password": "dbz", // <6>
     "database.server.id": "184054", // <7>
     "database.server.name": "fullfillment", // <8>
@@ -1636,7 +1635,7 @@ The following configuration properties are _required_ unless a default value is 
 
 |`database.user`
 |
-|Name of the MySQL database to use when connecting to the MySQL database server.
+|Name of the MySQL user to use when connecting to the MySQL database server.
 
 |`database.password`
 |
