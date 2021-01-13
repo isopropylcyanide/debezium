@@ -284,7 +284,7 @@ For example, consider a MySQL installation with an `inventory` database that con
 
 It is often useful for applications to consume events that describe the changes in the database schemas, so the MySQL connector can be configured to produce _schema change events_ with all of the DDL statements applied to databases in the MySQL server. When enabled, the connector writes all such events to a Kafka topic named _serverName_, where _serverName_ is the logical name of the connector as specified with the `database.server.name` configuration property. In our previous example where the logical server name is `fulfillment`, the schema change events would be recorded in the topic `fulfillment`.
 
-[IMPORTANT]
+[IMPORTANT]z
 ====
 The link:#database-schema-history[database history topic] and _schema change topic_ both contain events with the DDL statement. However, we've designed the events on the schema change topic to be easier to consume, so they are more granular and always have the database name. If you're going to consume schema change events, be sure to use the schema change topic and _never_ consume the database history topic.
 ====
@@ -1636,7 +1636,7 @@ The following configuration properties are _required_ unless a default value is 
 
 |`database.user`
 |
-|Name of the MySQL database to use when connecting to the MySQL database server.
+|Name of the MySQL user to use when connecting to the MySQL database server.
 
 |`database.password`
 |
